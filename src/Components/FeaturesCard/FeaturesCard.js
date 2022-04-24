@@ -8,8 +8,6 @@ export default function Card(props, { larguraTela }) {
     const values = props.dados
     return (
         <FeatureCard>
-            {console.log(values)}
-
             <Row xs={2} lg={1}>
                 <Col xs={12}>
                     <Top>

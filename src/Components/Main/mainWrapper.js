@@ -34,7 +34,7 @@ export default function MainWrapper() {
             </Col>
 
             <Col lg={8}>
-              <MainChart />
+              <MainChart/>
             </Col>
           </Row>
         </Container>

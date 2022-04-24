@@ -5,9 +5,10 @@ import WidgetInfo from "../info/infowidget";
 import MainChart from "../MainChart/MainGraphic";
 import Api from "../Services/Api";
 import { useEffect, useState } from "react";
+import { ContainerAll } from "./StylesWrapper";
+
 export default function MainWrapper() {
   const [coins, set_coins] = useState()
-
   const ConsumoApi = async () => {
     await Api.get('/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum%2Cdogecoin%2Ctether%2Cbinancecoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=7d')
       .then((response) => { set_coins(response.data) })
@@ -20,6 +21,7 @@ export default function MainWrapper() {
   const larguraTela = window.innerWidth
   return (
     <>
+    <ContainerAll>
       <Container fluid>
         <FeaturedInfo larguraTela={larguraTela} dados = {coins} />
       </Container>
@@ -37,6 +39,7 @@ export default function MainWrapper() {
       <Container fluid>
         <WidgetInfo />
       </Container>
+    </ContainerAll>
     </>
   );
 }

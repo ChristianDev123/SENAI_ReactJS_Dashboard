@@ -14,14 +14,13 @@ export default function HeaderWrapper() {
   }
   return (
     <>
-      <ThemeProvider theme={dado ==="Light"? LightTheme: DarkTheme}>
-      <Header>
-        <Image src={Icon} onClick={()=>setShownav(!showNav)} />
-       <Switch defaultChecked onClick={()=>ThemeToogler()}/>
-       {console.log(dado)}
-       <GlobalStyles />
-      </Header>
-      <SideBar show={showNav} />
+      <ThemeProvider theme={dado === "Light"? LightTheme: DarkTheme}>
+        <Header>
+          <Image src={Icon} onClick={()=>setShownav(!showNav)} />
+          <Switch defaultChecked onClick={()=>ThemeToogler()}/>
+          <GlobalStyles />
+        </Header>
+        <SideBar show={showNav} />
       </ThemeProvider>
     </>
   );

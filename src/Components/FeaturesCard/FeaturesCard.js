@@ -25,7 +25,12 @@ export default function Card(props, { larguraTela }) {
                             Last Update
                         </SubTitle>
                         <Value>
-                            {values?.[0]?.last_updated}
+                            <p>
+                                {new Date(values?.[0]?.last_updated).toLocaleDateString()}
+                            </p>
+                            <p>
+                                {new Date(values?.[0]?.last_updated).toLocaleTimeString()}
+                            </p>
                         </Value>
                     </Bottom>
                 </Col>
@@ -35,19 +40,19 @@ export default function Card(props, { larguraTela }) {
                             <Col>
                                 <Item className={dado < 20 ? "negative" : "positive"}>
                                     <ItemTitle>High Price 24H</ItemTitle>
-                                    <ResultValue>R$ {values?.[0]?.high_24h}</ResultValue>
+                                    <ResultValue>{Number(values?.[0]?.high_24h).toLocaleString('en-US',{style:'currency',currency:"USD"})}</ResultValue>
                                 </Item>
                             </Col>
                             <Col>
                                 <Item className={dado > 20 ? "positive" : "negative"}>
                                     <ItemTitle>Low Price 24H</ItemTitle>
-                                    <ResultValue>R$ {values?.[0]?.low_24h}</ResultValue>
+                                    <ResultValue>{Number(values?.[0]?.low_24h).toLocaleString('en-US',{style:'currency',currency:"USD"})}</ResultValue>
                                 </Item>
                             </Col>
                             <Col>
                                 <Item>
                                     <ItemTitle>Current Price</ItemTitle>
-                                    <ResultValue>R$ {values?.[0]?.current_price}</ResultValue>
+                                    <ResultValue>{Number(values?.[0]?.current_price).toLocaleString('en-US',{style:'currency',currency:"USD"})}</ResultValue>
                                 </Item>
                             </Col>
                         </Row>

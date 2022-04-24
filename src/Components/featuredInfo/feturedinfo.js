@@ -8,14 +8,13 @@ import { Col, Row } from "reactstrap";
 export default function FeaturedInfo(props) {
     const dados = props.dados
     return(
-                <Featured>
-
+        <Featured>
             <Row xs={1} md={3} className={props.larguraTela < 768?'gap-4':''} >
                 <Col>
                     <FeaturedItem>
                         <FeaturedTitle> <p>Bitcoin</p> </FeaturedTitle>
                         <FeaturedMoneyContainer>
-                            <FeaturedMoney>R$ {dados?.[0].current_price}</FeaturedMoney>
+                            <FeaturedMoney>{Number(dados?.[0].current_price).toLocaleString('en-US',{style:'currency',currency:"USD"})}</FeaturedMoney>
                             <FeaturedMoneyRate> <ImgLink src={logo}/></FeaturedMoneyRate>
                         </FeaturedMoneyContainer>
                         <FeaturedSub>Compared to last month</FeaturedSub>
@@ -25,7 +24,7 @@ export default function FeaturedInfo(props) {
                     <FeaturedItem>
                         <FeaturedTitle> <p>Ethereum</p> </FeaturedTitle>
                         <FeaturedMoneyContainer>
-                            <FeaturedMoney> R$ {dados?.[1]?.current_price} </FeaturedMoney>
+                            <FeaturedMoney>{Number(dados?.[1].current_price).toLocaleString('en-US',{style:'currency',currency:"USD"})}</FeaturedMoney>
                             <FeaturedMoneyRate><ImgLink src={lo}/></FeaturedMoneyRate>
                         </FeaturedMoneyContainer>
                         <FeaturedSub>Compared to last month</FeaturedSub>
@@ -35,7 +34,7 @@ export default function FeaturedInfo(props) {
                     <FeaturedItem>
                         <FeaturedTitle> <p>DogeCoin</p> </FeaturedTitle>
                         <FeaturedMoneyContainer>
-                            <FeaturedMoney> R$ {dados?.[4]?.current_price} </FeaturedMoney>
+                            <FeaturedMoney>{Number(dados?.[4].current_price).toLocaleString('en-US',{style:'currency',currency:"USD"})}</FeaturedMoney>
                             <FeaturedMoneyRate> <ImgLink src={log}/></FeaturedMoneyRate>
                         </FeaturedMoneyContainer>
                         <FeaturedSub>Compared to last month</FeaturedSub>

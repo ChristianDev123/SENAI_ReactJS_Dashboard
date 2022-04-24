@@ -53,6 +53,9 @@ export const SubTitle = styled.p`
 
 export const Value = styled.p`
     font-size:25px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 `;
 
 export const Summary = styled.div`

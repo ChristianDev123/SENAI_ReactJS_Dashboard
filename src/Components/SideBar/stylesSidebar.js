@@ -31,20 +31,21 @@ export const LogoWrapper = styled.section`
     justify-content: center;
 `;
 export const SectionDivider = styled.section`
-    padding:5px 0;
-    & ul, & li{
+    color:black;
+    & ul{
         list-style-type: none;
         margin: 10px 0;
     }
-    & ul a{
-        color: black;
+    & ul li a{
+        cursor: pointer;
+        color:black;
         text-decoration: none;
         font-size: 16px;
         display: block;
         padding: 10px 15px ;
         border-radius: 6px;
     }
-    & ul a:hover{
+    & ul li a:hover{
         color: black;
         background-color: #E5E5E5;
     } 

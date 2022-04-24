@@ -37,7 +37,7 @@ export default function MainWrapper() {
         </Row>
       </Container>
       <Container fluid>
-        <WidgetInfo />
+        <WidgetInfo coins={coins}/>
       </Container>
     </ContainerAll>
     </>

@@ -26,9 +26,9 @@ export default function WidgetInfo({coins}){
                             </tr>
                         </thead>
                         <tbody className="shadow p-3 mb-5 bg-white rounded">
-                            {/* {coins.map((coin, index) =>(
+                            {coins?.map((coin, index) =>(
                                 <Infocoin coin={coin} key={index} index={index + 1}/>
-                            ))} */}
+                            ))}
                         </tbody>   
                     </table>
                 </Col>

@@ -16,11 +16,8 @@ export default function Infocoin({coin, index}) {
             </td>
             <td>{coin.current_price}</td>
             <td className={coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'}>
-                {coin.price_change_percentage_24h}
+                {(coin.price_change_percentage_24h*100).toFixed(2)}%
             </td>
-            <td>{coin.market_cap}</td>
-            <td>{coin.total_volume}</td>
-            <td>{coin.circulating_supply}</td>
         </tr>
     )
 }
